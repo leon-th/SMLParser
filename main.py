@@ -3,8 +3,8 @@ import argparse
 from datetime import datetime
 
 import print_logging
-# Import local scripts
 import read_write_serial
+# Import local scripts
 
 # Define
 print_log = print_logging.print_logging
