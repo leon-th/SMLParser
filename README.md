@@ -8,3 +8,4 @@ It reads the data from Serial and output parsed data
 - [] CLI (Choose port etc.)
 - [] Write Data
 - [] Log data (to CSV or similar)
+- [x] Log output (info, error etc.) to file
