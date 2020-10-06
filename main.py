@@ -25,8 +25,7 @@ class color:
 
 # Arguments
 argparser = argparse.ArgumentParser(
-    description="SMLParser is an Python based SML(OBIS) Parser"
-)
+    description="SMLParser is an Python based SML(OBIS) Parser")
 requiredNamed = argparser.add_argument_group("required arguments")
 requiredNamed.add_argument("-sp", "--serialport", help="Serial Port")
 argparser.add_argument("-lf", "--log-file", help="Defines the log file")
@@ -40,11 +39,9 @@ args = argparser.parse_args()
 # Loglevel 0=Off 1= Error 2=Info 3=Debug 4=Everything - Default 2
 if args.log_level:
     if int(args.log_level) >= 1:
-        print(
-            "{}[i]{} Loglevel is: {}{}{}".format(
-                color.GREEN, color.N, color.YELLOW, args.log_level, color.N
-            )
-        )
+        print("{}[i]{} Loglevel is: {}{}{}".format(color.GREEN, color.N,
+                                                   color.YELLOW,
+                                                   args.log_level, color.N))
     loglevel = args.log_level
 else:
     loglevel = 2
@@ -52,28 +49,25 @@ else:
 if not args.serialport:
     if int(loglevel) >= 1:
         print_log(
-            "{}[!]{} You need to define the Serialport! {}-sp [SerialPort]{}".format(
-                color.RED, color.N, color.YELLOW, color.N
-            ),
+            "{}[!]{} You need to define the Serialport! {}-sp [SerialPort]{}".
+            format(color.RED, color.N, color.YELLOW, color.N),
             loglevel,
             args,
         )
     quit()
 # Print Serial-Port
 print_log(
-    "{}[i]{} Serial Port is: {}{}{}".format(
-        color.GREEN, color.N, color.YELLOW, args.serialport, color.N
-    ),
+    "{}[i]{} Serial Port is: {}{}{}".format(color.GREEN, color.N, color.YELLOW,
+                                            args.serialport, color.N),
     loglevel,
     args,
 )
 
-
 if args.log_file:
     print_log(
-        "{}[i]{} Log file-path is: {}{}{}".format(
-            color.GREEN, color.N, color.YELLOW, args.log_file, color.N
-        ),
+        "{}[i]{} Log file-path is: {}{}{}".format(color.GREEN, color.N,
+                                                  color.YELLOW, args.log_file,
+                                                  color.N),
         loglevel,
         args,
     )
@@ -82,9 +76,8 @@ if args.log_file:
 now = datetime.now()
 now_date_time = now.strftime("%Y-%m-%d %H:%M:%S")
 print_log(
-    "{}[i]{} Started at: {}{}{}".format(
-        color.GREEN, color.N, color.YELLOW, now_date_time, color.N
-    ),
+    "{}[i]{} Started at: {}{}{}".format(color.GREEN, color.N, color.YELLOW,
+                                        now_date_time, color.N),
     loglevel,
     args,
 )
