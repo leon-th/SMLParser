@@ -1,7 +1,7 @@
 # SML Parser
 
-This is an SML Parser written in Python.
-It reads the data from Serial and output parsed data
+This is an SML Parser written in Python. It reads the data from Serial and
+output parsed data
 
 ## To-Do
 
